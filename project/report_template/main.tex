@@ -1,0 +1,54 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath, amssymb}
+\usepackage{float}
+\usepackage{hyperref}
+\usepackage{natbib}
+\usepackage{booktabs}
+\usepackage{graphicx}
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+
+\title{Project Report on Symbolic Regression}
+\author{John Doe}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\section{Introduction}
+\begin{itemize}
+    \item What is symbolic regression and why is it relevant?
+    \item Why do standard ML methods struggle with extrapolation?
+    \item What is happening in this paper (short overview).
+\end{itemize}
+
+\section{Approach}
+\begin{itemize}
+    \item Describe the algorithm you built to discover symbolic formulas from data.
+    \item Use mathematical notation! How do you represent expressions (e.g., expression trees, genetic programming, neural-guided search)?
+    \item Cite properly! Related work includes PySR~\cite{PySR} or neural approaches to symbolic regression~\cite{NeuralSR}.
+    \item Use pseudocode or figures to make difficult parts of your description understandable.
+\end{itemize}
+
+\section{Experiments}
+Here you have freedom to find something interesting. Some possibilities would be:
+\begin{itemize}
+    \item Compare different search strategies on the same benchmark functions.
+    \item Ablation study: how does performance change with different operator sets or complexity penalties?
+    \item Inspect your algorithm's extrapolation behaviour on functions of varying complexity.
+    \item Test on real-world data where you expect an underlying symbolic relationship.
+\end{itemize}
+Get creative! Find appropriate representations that highlight your results (Tables, Plots).
+
+\section{Discussion}
+\begin{itemize}
+    \item Recap: What did you do?
+    \item What are shortcomings/strengths of your approach?
+    \item When does symbolic regression work well, and when does it fail?
+    \item Discuss results and future directions.
+\end{itemize}
+
+\bibliographystyle{plain}
+\bibliography{references}
+\end{document}
