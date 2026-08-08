@@ -1,0 +1,73 @@
+experiment,function,param,method,trial,mse,nmse,seconds,expression
+function_suite,linear,-,XiGuidedSR,0,3.359249260289628e-06,3.2695497340733746e-08,5.6,2.0*x + 0.9992
+function_suite,linear,-,GplearnSR,0,5.103863021548466e-06,4.967578375952955e-08,11.7,"add(add(X0, X0), cos(-0.067))"
+function_suite,linear,-,NeuralSR,0,3.359249260289628e-06,3.2695497340733746e-08,0.2,2.0*x + 0.9992
+function_suite,quadratic,-,XiGuidedSR,0,7.025291793454583e-07,6.173368819474344e-09,7.4,0.5*x**2 - 1.0*x - 0.0009083
+function_suite,quadratic,-,GplearnSR,0,140.10042560190192,1.2311112825401502,14.9,"sub(sub(exp(log(X0)), add(X0, mul(log(cos(log(add(-0.182, X0)))), log(add(add(mul(0.845, X0), mul(0.845, X0)), sqrt(add(sqrt(X0), add(X0, mul(log(cos(log(add(-0.182, X0)))), log(add(add(mul(0.845, X0), sqrt(X0)), sqrt(add(sqrt(X0), log(sqrt(X0))))))))))))))), cos(sqrt(X0)))"
+function_suite,quadratic,-,NeuralSR,0,7.025291521589084e-07,6.173368580576652e-09,0.0,0.5*(x - 1.0)**2 - 0.5009
+function_suite,sine,-,XiGuidedSR,0,1.7589139585351868e-06,3.581385235325134e-06,6.0,1.002*sin(x) - 0.0008189
+function_suite,sine,-,GplearnSR,0,0.0,0.0,13.5,sin(X0)
+function_suite,sine,-,NeuralSR,0,1.7589139585351868e-06,3.581385235325134e-06,0.0,1.002*sin(x) - 0.0008189
+function_suite,high_freq_sine,-,XiGuidedSR,0,2.277442498262774,4.581412690777455,5.6,3.973e-10*x*exp(x**2) + 0.001217
+function_suite,high_freq_sine,-,GplearnSR,0,0.006528389500498559,0.013132821808119007,15.3,"sin(add(mul(div(sin(X0), div(0.659, 0.777)), exp(sqrt(cos(sin(add(X0, X0)))))), sin(X0)))"
+function_suite,high_freq_sine,-,NeuralSR,0,0.4723648093695894,0.9502317331714314,0.0,0.02106
+function_suite,product,-,XiGuidedSR,0,2.303865215502358e-06,1.8362637526842534e-07,7.4,1.0*x*sin(x) - 0.0006094
+function_suite,product,-,GplearnSR,0,0.0,0.0,11.5,"mul(sin(X0), X0)"
+function_suite,product,-,NeuralSR,0,2.303865215502358e-06,1.8362637526842534e-07,0.0,1.0*x*sin(x) - 0.0006094
+function_suite,hero,-,XiGuidedSR,0,84.89715520100495,8.775021963148108,7.6,0.8375 - 0.004917*exp(Abs(x - sin(x - sin(x))))
+function_suite,hero,-,GplearnSR,0,29.59330764183228,3.058782404480416,13.6,"sqrt(log(cos(sqrt(log(cos(mul(exp(div(div(log(X0), 0.988), 0.989)), sin(cos(div(log(X0), 0.988))))))))))"
+function_suite,hero,-,NeuralSR,0,47.75758792249434,4.936253540353069,0.0,2.528*sin(1.1760597706854*sqrt(Abs(x))) - 1.467
+function_suite,sqrt_like,-,XiGuidedSR,0,2.3284952684117317e-06,5.733631282125618e-06,6.2,0.9994*Abs(x)**0.5 + 7.024e-5
+function_suite,sqrt_like,-,GplearnSR,0,0.0,0.0,12.9,sqrt(X0)
+function_suite,sqrt_like,-,NeuralSR,0,2.3284952684117317e-06,5.733631282125618e-06,0.0,0.9994*Abs(x)**0.5 + 7.024e-5
+function_suite,exp_growth,-,XiGuidedSR,0,4.617882094566855e-05,2.781901230643398e-07,6.6,0.9997*exp(x/2) + 5.372e-5
+function_suite,exp_growth,-,GplearnSR,0,2.0510406406164398e-30,1.2355864366791904e-32,11.5,sqrt(exp(X0))
+function_suite,exp_growth,-,NeuralSR,0,4.617882094566855e-05,2.781901230643398e-07,0.0,0.9997*exp(x/2) + 5.372e-5
+function_suite,rational,-,XiGuidedSR,0,3.709577248397036e-05,0.0007073736517349443,7.8,0.02081 + 0.9837*exp(-x**4/(4*x**2 - 4*x*sin(x) + sin(x)**2))
+function_suite,rational,-,GplearnSR,0,0.0002324476706528417,0.004432509329682616,13.0,"exp(mul(sqrt(sin(sin(div(mul(-0.429, div(-0.258, X0)), X0)))), mul(log(-0.104), mul(X0, X0))))"
+function_suite,rational,-,NeuralSR,0,0.0035623805828741153,0.06793049431350226,0.0,0.4215 - 0.2432*log(Abs(x))
+noise_sweep,quadratic,noise=0.0,XiGuidedSR,0,7.154968410354577e-30,6.287743147842036e-32,7.3,x*(0.5*x - 1.0)
+noise_sweep,quadratic,noise=0.0,GplearnSR,0,137.80578626334238,1.2110289502555258,16.6,"sub(sub(exp(log(X0)), add(X0, mul(log(cos(log(add(-0.294, X0)))), log(add(add(mul(0.845, X0), add(-0.182, X0)), sqrt(add(add(add(X0, mul(log(cos(log(add(-0.182, X0)))), log(add(log(cos(log(add(-0.294, X0)))), log(add(-0.294, X0)))))), X0), log(exp(log(X0)))))))))), cos(sqrt(X0)))"
+noise_sweep,quadratic,noise=0.0,NeuralSR,0,6.602765776699868e-30,5.802470799055991e-32,0.0,0.5*(x - 1.0)**2 - 0.5
+noise_sweep,quadratic,noise=0.05,XiGuidedSR,0,1.7563229564406412e-05,1.5429127945251276e-07,5.5,0.5*(x - 1.0)**2 - 0.5045
+noise_sweep,quadratic,noise=0.05,GplearnSR,0,138.4215591223468,1.216020059549927,16.4,"sub(sub(exp(log(X0)), add(X0, mul(log(cos(log(add(-0.182, X0)))), log(add(add(mul(0.845, X0), X0), sqrt(add(add(X0, mul(log(cos(X0)), log(add(X0, mul(log(cos(log(add(-0.182, X0)))), sub(sub(exp(log(X0)), add(X0, mul(log(cos(log(add(-0.182, X0)))), log(add(add(mul(0.845, X0), X0), sqrt(add(sqrt(X0), log(sub(-0.182, X0))))))))), cos(sqrt(X0)))))))), log(sub(-0.182, X0))))))))), cos(sqrt(X0)))"
+noise_sweep,quadratic,noise=0.05,NeuralSR,0,1.7563229458836244e-05,1.54291278525089e-07,0.0,0.5*(x - 1.0)**2 - 0.5045
+noise_sweep,quadratic,noise=0.2,XiGuidedSR,0,0.004329947555606757,3.7993526504952565e-05,5.6,0.4988*x**2 - 1.005*x - 0.004822
+noise_sweep,quadratic,noise=0.2,GplearnSR,0,31.979826456238065,0.2806099539278605,16.4,"sub(sqrt(add(mul(sub(sub(sub(exp(X0), log(sin(-0.675))), log(X0)), sin(sub(-0.689, X0))), -0.316), exp(add(log(div(X0, -0.214)), mul(sub(X0, -0.772), sin(-0.675)))))), cos(sqrt(mul(X0, 0.563))))"
+noise_sweep,quadratic,noise=0.2,NeuralSR,0,0.0002810116595553192,2.465762875508918e-06,0.0,0.5*(x - 1.0)**2 - 0.5182
+noise_sweep,product,noise=0.0,XiGuidedSR,0,0.0,0.0,7.6,1.0*x*sin(x) + 3.285e-18
+noise_sweep,product,noise=0.0,GplearnSR,0,0.0,0.0,1.0,"mul(sin(X0), X0)"
+noise_sweep,product,noise=0.0,NeuralSR,0,0.0,0.0,0.0,1.0*x*sin(x)
+noise_sweep,product,noise=0.05,XiGuidedSR,0,5.759663039282633e-05,4.585979971024068e-06,5.5,1.002*x*sin(x) - 0.003047
+noise_sweep,product,noise=0.05,GplearnSR,0,0.0,0.0,13.5,"mul(sin(X0), X0)"
+noise_sweep,product,noise=0.05,NeuralSR,0,5.759663039282633e-05,4.585979971024068e-06,0.0,1.002*x*sin(x) - 0.003047
+noise_sweep,product,noise=0.2,XiGuidedSR,0,0.0009215460811916734,7.300945894633369e-05,7.5,1.007*x*sin(x) - 0.01219
+noise_sweep,product,noise=0.2,GplearnSR,0,0.0,0.0,11.5,"mul(sin(X0), X0)"
+noise_sweep,product,noise=0.2,NeuralSR,0,0.0009215460811916734,7.300945894633369e-05,0.0,1.007*x*sin(x) - 0.01219
+band_sweep,sqrt_like,band=1.0,XiGuidedSR,0,1.9637535845189685e-06,6.381430576271657e-06,6.4,0.9994*Abs(x)**0.5 + 7.024e-5
+band_sweep,sqrt_like,band=1.0,GplearnSR,0,0.0,0.0,13.2,sqrt(X0)
+band_sweep,sqrt_like,band=1.0,NeuralSR,0,1.9637535845189685e-06,6.381430576271657e-06,0.0,0.9994*Abs(x)**0.5 + 7.024e-5
+band_sweep,sqrt_like,band=3.0,XiGuidedSR,0,2.3284952684117317e-06,5.733631282125618e-06,4.3,0.9994*Abs(x)**0.5 + 7.024e-5
+band_sweep,sqrt_like,band=3.0,GplearnSR,0,0.0,0.0,12.8,sqrt(X0)
+band_sweep,sqrt_like,band=3.0,NeuralSR,0,2.3284952684117317e-06,5.733631282125618e-06,0.0,0.9994*Abs(x)**0.5 + 7.024e-5
+band_sweep,sqrt_like,band=6.0,XiGuidedSR,0,2.8782092059409063e-06,4.941602892051562e-06,6.1,0.9994*Abs(x)**0.5 + 7.024e-5
+band_sweep,sqrt_like,band=6.0,GplearnSR,0,0.0,0.0,11.1,sqrt(X0)
+band_sweep,sqrt_like,band=6.0,NeuralSR,0,2.8782092059409063e-06,4.941602892051562e-06,0.0,0.9994*Abs(x)**0.5 + 7.024e-5
+band_sweep,hero,band=1.0,XiGuidedSR,0,3.6295274320433886,7.361014406009255,7.6,0.8375 - 0.004917*exp(Abs(x - sin(x - sin(x))))
+band_sweep,hero,band=1.0,GplearnSR,0,0.536966484191073,1.0890172618007583,15.7,"sqrt(log(cos(sqrt(log(cos(mul(exp(div(div(log(X0), 0.988), 0.989)), sin(cos(div(log(X0), 0.988))))))))))"
+band_sweep,hero,band=1.0,NeuralSR,0,3.4752485166043368,7.0481226204108784,0.0,2.528*sin(1.1760597706854*sqrt(Abs(x))) - 1.467
+band_sweep,hero,band=3.0,XiGuidedSR,0,84.89715520100495,8.775021963148108,5.7,0.8375 - 0.004917*exp(Abs(x - sin(x - sin(x))))
+band_sweep,hero,band=3.0,GplearnSR,0,29.59330764183228,3.058782404480416,15.5,"sqrt(log(cos(sqrt(log(cos(mul(exp(div(div(log(X0), 0.988), 0.989)), sin(cos(div(log(X0), 0.988))))))))))"
+band_sweep,hero,band=3.0,NeuralSR,0,47.75758792249434,4.936253540353069,0.0,2.528*sin(1.1760597706854*sqrt(Abs(x))) - 1.467
+band_sweep,hero,band=6.0,XiGuidedSR,0,24562.473333260263,1569.7022244294712,7.6,0.8375 - 0.004917*exp(Abs(x - sin(x - sin(x))))
+band_sweep,hero,band=6.0,GplearnSR,0,53.064025844588784,3.3911372961225306,14.0,"sqrt(log(cos(sqrt(log(cos(mul(exp(div(div(log(X0), 0.988), 0.989)), sin(cos(div(log(X0), 0.988))))))))))"
+band_sweep,hero,band=6.0,NeuralSR,0,92.91854024079434,5.9381006679490795,0.0,2.528*sin(1.1760597706854*sqrt(Abs(x))) - 1.467
+trainsize_sweep,product,n=15,XiGuidedSR,0,0.07948048751948229,0.0038577544806023514,8.4,(0.08609*x + 1.044*(x*(x + 0.04077) + 1.073*cos(0.536506534188823*x**4 - log(Abs(x)) + 0.697160586256177))*sin(x))/x
+trainsize_sweep,product,n=15,GplearnSR,0,0.0,0.0,11.4,"mul(sin(X0), X0)"
+trainsize_sweep,product,n=15,NeuralSR,0,0.0007668345798477326,3.7219947041256916e-05,0.0,1.005*x*sin(x) + 0.004805
+trainsize_sweep,product,n=50,XiGuidedSR,0,0.0028940277360131657,0.00015616011520329688,6.7,1.01*x*sin(x) + 0.01519
+trainsize_sweep,product,n=50,GplearnSR,0,0.01596104700694102,0.0008612491540260095,13.4,"mul(sin(add(X0, -0.028)), X0)"
+trainsize_sweep,product,n=50,NeuralSR,0,0.0028940277360131657,0.00015616011520329688,0.0,1.01*x*sin(x) + 0.01519
+trainsize_sweep,product,n=200,XiGuidedSR,0,0.0020734786928700015,0.00016355668546984994,5.5,1.011*x*sin(x) - 0.01828
+trainsize_sweep,product,n=200,GplearnSR,0,0.0,0.0,13.7,"mul(sin(X0), X0)"
+trainsize_sweep,product,n=200,NeuralSR,0,0.0020734786928700015,0.00016355668546984994,0.0,1.011*x*sin(x) - 0.01828
