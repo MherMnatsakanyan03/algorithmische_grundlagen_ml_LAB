@@ -33,9 +33,9 @@ import time
 
 import numpy as np
 
-from project.final.experiment.datagen import Node, generate_dataset, mse
-from project.final.experiment.regressors import XiGuidedSR, GplearnSR
-from project.final.experiment.neural_sr import NeuralSR
+from datagen import Node, generate_dataset, mse
+from regressors import XiGuidedSR, GplearnSR
+from neural_sr import NeuralSR
 
 QUICK = False
 TRIALS = [0]            # add seeds, e.g. [0, 1, 2], for mean-over-trials

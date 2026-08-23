@@ -23,7 +23,7 @@ import numpy as np
 from scipy.optimize import least_squares
 from scipy.stats import chatterjeexi
 
-from project.final.experiment.datagen import Node, FunctionSampler, UNARY, BINARY
+from datagen import Node, FunctionSampler, UNARY, BINARY
 
 
 # ---------------------------------------------------------------------------
@@ -196,7 +196,8 @@ class XiGuidedSR(Regressor):
             if score < best_score:                    # decide how to continue
                 # New best found: adopt it as the hill-climbing anchor and remember it
                 best_tree, best_score = cand, score
-                pool.append((score, cand))
+            
+            pool.append((score, cand))
 
         # full constant fitting only for the top-k structures
         pool.sort(key=lambda t: t[0])
@@ -289,7 +290,7 @@ class GplearnSR(Regressor):
 # ---------------------------------------------------------------------------
 
 if __name__ == "__main__":
-    from project.final.experiment.datagen import generate_dataset, mse
+    from datagen import generate_dataset, mse
 
     hero = Node("add", [
         Node("mul", [Node("const", value=0.5),

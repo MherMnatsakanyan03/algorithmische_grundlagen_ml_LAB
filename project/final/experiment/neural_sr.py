@@ -15,8 +15,8 @@ import numpy as np
 import torch
 import torch.nn as nn
 
-from project.final.experiment.datagen import Node, FunctionSampler, UNARY, BINARY
-from project.final.experiment.regressors import Regressor, fit_constants
+from datagen import Node, FunctionSampler, UNARY, BINARY
+from regressors import Regressor, fit_constants
 
 # vocabulary: specials + terminals + operators
 # <pad>: padding for batching variable-length sequences
@@ -212,7 +212,7 @@ class NeuralSR(Regressor):
 
 
 if __name__ == "__main__":
-    from project.final.experiment.datagen import generate_dataset, mse
+    from datagen import generate_dataset, mse
 
     reg = NeuralSR()
     reg.pretrain(n_functions=2000, epochs=2,

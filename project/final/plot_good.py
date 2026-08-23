@@ -19,7 +19,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 import sympy as sp
 
-from project.final.experiment.datagen import Node, generate_dataset
+from datagen import Node, generate_dataset
 
 RESULTS = "results.csv"
 OUT = "good_fit_plot.pdf"

@@ -8,9 +8,9 @@ Needs neural_sr.pt (the pretrained weights) in the same folder.
 import numpy as np
 import matplotlib.pyplot as plt
 
-from project.final.experiment.datagen import Node, generate_dataset
-from project.final.experiment.regressors import XiGuidedSR, GplearnSR
-from project.final.experiment.neural_sr import NeuralSR
+from datagen import Node, generate_dataset
+from regressors import XiGuidedSR, GplearnSR
+from neural_sr import NeuralSR
 
 # same dataset as in the experiments (seed 0, noise 0.01, band 3)
 hero = Node("add", [
